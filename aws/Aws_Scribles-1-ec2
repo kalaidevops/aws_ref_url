@@ -1,0 +1,72 @@
+
+The AWS Command Line Interface (AWS CLI)
+
+Installation of aws CLI
+
+	sudo apt install python-pip
+	sudo pip install awscli
+
+to enabled autocomplete of the aws commands
+
+	complete -C '/usr/local/bin/aws_completer' aws
+
+Configuration of root key to access aws via cli
+
+	## to view the contents of the rootkey.csv
+	more rootkey.csv
+	## configure the aws rootkey
+	$	aws configure
+		AWS Access Key ID [None]: AKIAIKVKZ6IGBVXNRSDA
+		AWS Secret Access Key [None]: hCJ/Fn3nE378Hb7WjGpHSYa9TRCsia/U4cAd+MG
+		Default region name [None]: us-east-1
+		Default output format [None]: json
+		
+Configure virtual environment: 
+
+	Relaying on system-wide Python installation may be undesirable in a production environment, as it creates an update dependency between the aws tools and any other Python program in the system.
+	
+	creating virtual environment:
+	
+	sudo pip install virtualenv
+	virtualenv ~/.python
+	
+	## This creates a separate Python environment, including executables, in the .python directory.
+	
+	## to switch to virtual environmnet
+	
+	source ~/.python/bin/activate
+	
+	## to deactivate back to normal envirinment
+	
+	deactiavte
+	
+
+jq play provides a convenient to filter out the json output
+
+	## to install jq
+	
+	sudo apt install jq
+	
+
+Installing legacy command line tools
+
+	## refer the url : https://alestic.com/2012/09/aws-command-line-tools/
+	
+
+AWS Regions and Availability Zones
+	
+		AWS - X nos Regions - X nos of Availablity Zones (Each availability zone (AZ) is located in a physically separate datacenter within its region)
+			
+		Two manin benifites are:
+			1. We can place the application resources near to the end users for performance issues.
+			2. We can design the application with fault tolerance	
+	
+	
+ec2 - Instances
+
+	Amazon Machine Images (AMIs) are the main building blocks of EC2.AMI are used to launch instance.
+		
+	
+
+	
+	
